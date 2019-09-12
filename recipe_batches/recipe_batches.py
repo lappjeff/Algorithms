@@ -3,11 +3,9 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-    #receives two dictionaries, recipe and ingredients
-    #returns number of batches that can be made with ingredients
 
     #check if keys are in both recipe and ingredients
-    #diff is a dicionary of keys that are not in both arrays
+    #diff is a list of keys that are not in both arrays
     diff = set(recipe) - set(ingredients)
 
     #if a key is missing from one of the dictionaries, return 0
@@ -15,7 +13,6 @@ def recipe_batches(recipe, ingredients):
         return 0
 
     #maximum number of batches from current ingredients vs recipe
-    #how can I get this to work with 0
     max_batches = None
     #loop through recipe
     for key in recipe:
